@@ -1,0 +1,14 @@
+{
+  "asset_id": "P01",
+  "path": "arka-portrait-concept.png",
+  "type": "AI-generated fictional portrait",
+  "created_at": "2026-11-05",
+  "status": "concept; not yet user-selected",
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "sha256": "88c571255978d1b7e3650c821b8ed81f6ed1250457a057d1b9c8f018694c8e12",
+  "source_path": "/workspace/generated_images/exec-99163aaa-f84b-4374-812e-8f9213295494.png",
+  "note": "Generated during planning. Neutral portrait contains no job-specific equipment and is suitable as initial marketing persona concept. See ASSET-PLAN.md for identity and prompt. Not a real person or production photo."
+}

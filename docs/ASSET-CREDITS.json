@@ -1,0 +1,116 @@
+{
+  "description": "Original generated campaign concept images for the fictional Arka Pradana marketing portfolio. Imaginary brands, products, and spaces; not photographs documenting an actual commercial campaign. Master originals are retained in the workspace generated_images directory. Other imagery such as the Arka portrait has its own SOURCES.json in docs/reference-assets/images.",
+  "assets": [
+    {
+      "id": "after-hours",
+      "type": "AI-generated campaign concept photograph",
+      "fictional": true,
+      "created_at": "2026-11-05",
+      "source_path": "/workspace/generated_images/exec-720574c8-a58a-44e2-9817-779d210f509e.png",
+      "prompt": "Create one photorealistic cinematic campaign key visual for a fictional premium electric bicycle brand. Wide landscape 3:2 composition, original unbranded electric city bicycle in complete side profile on a rain-wet urban street at blue hour, bicycle positioned slightly right of center but entirely visible with both wheels geometrically correct. Beautiful sculptural black and deep cobalt-blue frame with believable electric bike engineering and clean design, no brand logo, no text. Moody Indonesian-inspired modern city alley background, refined architectural concrete and glass, subtle cool blue shop light reflections and one restrained warm amber light in the distance, wet asphalt reflecting rim light, no people, no vehicles near subject, no license plates, no visible signage. Strong premium product photography with crisp bicycle silhouette and natural lighting. Generous clean dark space in the upper left for future campaign typography. Original fictional product, not a copy of any real brand, no watermarks, no collage, no UI. Grounded cinematic realism rather than sci-fi.",
+      "width": 1536,
+      "height": 1024,
+      "source_sha256": "f7d2afa2c3c602ee8efc45a5f80f7b22b01dd5567ae4d9be86b5fa264544e15e",
+      "variants": [
+        {
+          "path": "public/media/projects/after-hours-640.webp",
+          "url": "/media/projects/after-hours-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 47770,
+          "sha256": "581a8d16ab84f291dfb0772a6eac14998b72fd39ddee8f9829b375a98f6a2098"
+        },
+        {
+          "path": "public/media/projects/after-hours-960.webp",
+          "url": "/media/projects/after-hours-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 95560,
+          "sha256": "e32d952eceda35e83d29b7332ef06888b352da36feec2d822280095b6c5780b5"
+        },
+        {
+          "path": "public/media/projects/after-hours.webp",
+          "url": "/media/projects/after-hours.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 199292,
+          "sha256": "59263ea65ef67c6b0d2ba497cb1f2844334ded6c588e98e47d76715f627acdad"
+        }
+      ]
+    },
+    {
+      "id": "quiet-form",
+      "type": "AI-generated campaign concept photograph",
+      "fictional": true,
+      "created_at": "2026-11-05",
+      "source_path": "/workspace/generated_images/exec-4a3d3af8-2d2b-428b-abf7-59bbcc0d36fc.png",
+      "prompt": "Create one photorealistic premium furniture campaign photograph. Wide landscape 3:2 composition. A single original sculptural timber lounge chair, tactile light warm oak wood grain, softly curved back and elegant thick curved legs, beautifully designed but believable furniture, sitting slightly right of center in a spacious quiet architectural concrete studio. Natural warm late afternoon sun pours from the unseen left window, casting a long precise geometric shadow across the matte concrete floor and wall. Gentle light on the wood reveals its tactile finish. Minimal composition with generous empty space to the left and above for campaign typography later. A small strip of shadowed architectural opening at the far right, no decor clutter. Muted warm gray, sand, oak, pale gold. Real interior architectural photography, high-end magazine quality, calm and material-focused. No people, no text, no logos, no watermark, no existing furniture brand imitation, no collage or UI. Fictional furniture product and room.",
+      "width": 1536,
+      "height": 1024,
+      "source_sha256": "8f0cac671e64ec302a71f77cae6ea96e0a1f49321f1837dfc3581063e5c17fc4",
+      "variants": [
+        {
+          "path": "public/media/projects/quiet-form-640.webp",
+          "url": "/media/projects/quiet-form-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 16862,
+          "sha256": "8eb02b3d10767dd03cf857333045ed054f333ed8870028afb17fb12363cc8088"
+        },
+        {
+          "path": "public/media/projects/quiet-form-960.webp",
+          "url": "/media/projects/quiet-form-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 34758,
+          "sha256": "f0b889f0456a3bc87919530f6f4584f3e1d463449d8675c752456df88e021f03"
+        },
+        {
+          "path": "public/media/projects/quiet-form.webp",
+          "url": "/media/projects/quiet-form.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 80858,
+          "sha256": "be6f90efa104cc0435d66900761502a45ebf5e5424d05762363210a9f36b7677"
+        }
+      ]
+    },
+    {
+      "id": "tidal-memory",
+      "type": "AI-generated campaign concept photograph",
+      "fictional": true,
+      "created_at": "2026-11-05",
+      "source_path": "/workspace/generated_images/exec-387d40d3-1af7-46a3-b243-25b398e11eb6.png",
+      "prompt": "Create one photorealistic cinematic luxury coastal hospitality campaign photograph. Wide landscape 3:2 composition. View from inside an original fictional tropical coastal retreat toward a vast turquoise ocean and distant dramatic soft island coastline. Architectural pale natural limestone interior with broad floor-to-ceiling opening, large airy ivory linen curtain on the right catching a sea breeze and gently flowing, warm sunlit stone floor, refined low timber bench partially visible at lower right. Deep ocean fills the central frame through the opening, bright but soft afternoon light, intimate and quiet sense of place. The composition feels like premium boutique hotel editorial photography, not a generic travel postcard. Strong simple geometry and tactile fabric detail, restrained natural colors, clear sea horizon. No recognizable real landmark, no people, no text, no logos, no pool crowds, no watermarks, no collage or UI. Original imaginary property. Leave uncluttered sea and wall areas for later website copy.",
+      "width": 1536,
+      "height": 1024,
+      "source_sha256": "f98c36087009e1c43e2eccbf334a33cfc821f6fea1c0a0d7da0e68e1ba7bc942",
+      "variants": [
+        {
+          "path": "public/media/projects/tidal-memory-640.webp",
+          "url": "/media/projects/tidal-memory-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 33734,
+          "sha256": "ffc6aba7434e584fb01383684f12cfb6f14c86a481cf884876587651b1e0d3ee"
+        },
+        {
+          "path": "public/media/projects/tidal-memory-960.webp",
+          "url": "/media/projects/tidal-memory-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 74012,
+          "sha256": "ac301aee48bff27ea07d1d3333fb34296e2024decf00e53bd6544c5503c2b2c9"
+        },
+        {
+          "path": "public/media/projects/tidal-memory.webp",
+          "url": "/media/projects/tidal-memory.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 180762,
+          "sha256": "abe107cf417c310e75f94d235eae8b456fb7f61bbd3b41dc2d502e0b8e55fbee"
+        }
+      ]
+    }
+  ]
+}

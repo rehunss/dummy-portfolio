@@ -1,0 +1,34 @@
+[
+  {
+    "path": "barlow-condensed/BarlowCondensed-ExtraBold.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/barlowcondensed/BarlowCondensed-ExtraBold.ttf",
+    "bytes": 110296,
+    "sha256": "724c9c25952d5f4a2d87185d9767aa006144c5f0d944dc05bf7d5d603551c260",
+    "retrieved_at": "2026-11-05",
+    "license": "SIL Open Font License 1.1; included in family directory"
+  },
+  {
+    "path": "barlow-condensed/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/barlowcondensed/OFL.txt",
+    "bytes": 4377,
+    "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+    "retrieved_at": "2026-11-05",
+    "license": "SIL Open Font License 1.1; included in family directory"
+  },
+  {
+    "path": "manrope/Manrope-variable.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope[wght].ttf",
+    "bytes": 164700,
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "retrieved_at": "2026-11-05",
+    "license": "SIL Open Font License 1.1; included in family directory"
+  },
+  {
+    "path": "manrope/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt",
+    "bytes": 4387,
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "retrieved_at": "2026-11-05",
+    "license": "SIL Open Font License 1.1; included in family directory"
+  }
+]

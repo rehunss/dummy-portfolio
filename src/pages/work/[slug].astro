@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { projects } from '../../data/projects';
+import type { Project } from '../../data/projects';
+import '../../styles/case-study.css';
+import BackArrow from '../../components/BackArrow.astro';
+
+export function getStaticPaths() {
+  return projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: { project, next: projects[(index + 1) % projects.length] },
+  }));
+}
+
+interface Props { project: Project; next: Project }
+const { project, next } = Astro.props;
+const isAeru = project.slug === 'after-hours';
+---
+
+<BaseLayout title={`${project.title} — ${project.brand} | Arka Pradana`} description={project.description} image={project.image}>
+  <div class="case-page" style={`--project-accent:${project.accent}`}>
+    <section class="case-hero" aria-labelledby="case-title">
+      <a class="case-back" href="/#work"><BackArrow /> Back to work</a>
+      <div class="case-heading-row">
+        <div>
+          <p class="case-kicker">{project.brand} / {project.year}</p>
+          <h1 id="case-title">{project.title}</h1>
+        </div>
+        <p class="case-intro">{project.description}</p>
+      </div>
+      <div class="case-meta">
+        <div><span>Discipline</span><p>{project.category}</p></div>
+        <div><span>My role in the concept</span><p>{project.role}</p></div>
+        <div><span>Project status</span><p>Fictional campaign / Strategy concept</p></div>
+      </div>
+      <figure class="case-cover">
+        <img src={project.image} srcset={`${project.image.replace('.webp', '-640.webp')} 640w, ${project.image.replace('.webp', '-960.webp')} 960w, ${project.image} 1536w`} sizes="(max-width: 767px) 100vw, 94vw" width="1536" height="1024" alt={project.imageAlt} fetchpriority="high" />
+        <figcaption>Original concept imagery for {project.brand}. AI-generated; not a real campaign.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-reading" aria-labelledby="context-heading">
+      <div class="case-context case-grid">
+        <div class="case-side-heading"><p class="case-kicker">The starting point</p><h2 id="context-heading">A different<br />way in.</h2></div>
+        <div class="case-story">
+          <h3>The context</h3><p>{project.context}</p>
+          <h3>The audience tension</h3><p>{project.tension}</p>
+          <h3>The strategic choice</h3><p>{project.choice}</p>
+          <p class="case-note">Simulated research. The audience and category assumptions in this case study have not been validated through real interviews or campaign activity.</p>
+        </div>
+      </div>
+      <div class="case-platform">
+        <p class="case-kicker">The organising idea</p>
+        <h2>{project.headline}</h2>
+        <div class="case-platform-details"><p>A clear point of view, carried across the journey.</p><span>{project.brand}</span></div>
+      </div>
+      <div class="case-workbench" aria-labelledby="thinking-heading">
+        <div class="case-section-heading"><h2 id="thinking-heading">The thinking<br />behind the work.</h2><p>Start with a useful question.<br />Make a deliberate choice.<br />Give every touchpoint a role.</p></div>
+        <div class="case-strategy-list">
+          {project.strategy.map((step, index) => <article><span class="case-step" aria-hidden="true">0{index + 1}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></article>)}
+        </div>
+        <div class="case-message-map" aria-label="Illustrative positioning and message map">
+          <div class="case-map-header"><span>Positioning canvas</span><span>Illustrative strategy material</span></div>
+          <div class="case-map-grid">
+            <div><h3>For whom</h3><p>{project.audience}</p></div>
+            <div><h3>The promise</h3><p>{project.promise}</p></div>
+            <div><h3>The next step</h3><p>{project.action}.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-system" aria-labelledby="system-heading">
+      <div class="case-section-heading"><div><p class="case-kicker">The campaign system</p><h2 id="system-heading">One idea.<br />Different moments.</h2></div><p>Concept applications that connect the message, the medium and the next step.</p></div>
+      <figure class="case-billboard">
+        <img src={project.image} width="1600" height="1067" alt="" loading="lazy" />
+        <div class="case-billboard-copy"><span class="case-brand">{project.brand}</span><h3>{project.headline}</h3><span class="case-mock-action">{project.action} <span aria-hidden="true">↗</span></span></div>
+        <figcaption>Outdoor campaign concept / Not a live placement</figcaption>
+      </figure>
+      <div class="case-applications">
+        <figure class="case-social">
+          <div class="case-social-top"><span class="case-brand">{project.brand}</span><span>Campaign concept</span></div>
+          <img src={project.image.replace('.webp', '-640.webp')} width="640" height="427" alt="" loading="lazy" />
+          <div class="case-social-bottom"><h3>{project.headline}</h3><p>{project.promise}</p></div>
+          <figcaption>Social creative / Illustrative application</figcaption>
+        </figure>
+        <figure class="case-landing">
+          <div class="case-browser-bar" aria-hidden="true"><span></span><span></span><span></span><i>{project.brand.toLowerCase().replace(/\s/g, '')}.example</i></div>
+          <div class="case-landing-nav"><span class="case-brand">{project.brand}</span><span>Discover the concept</span></div>
+          <div class="case-landing-body"><div><h3>{project.headline}</h3><p>{project.promise}</p><span class="case-mock-action">{project.action} <span aria-hidden="true">↗</span></span></div><img src={project.image.replace('.webp', '-640.webp')} width="640" height="427" alt="" loading="lazy" /></div>
+          <figcaption>Landing-page messaging / Static mockup</figcaption>
+        </figure>
+      </div>
+      <p class="case-note case-system-note">These are static campaign mockups. Their calls to action illustrate the strategy and do not submit enquiries, accept bookings or sell products.</p>
+    </section>
+
+    <section class="case-reading case-channel-section" aria-labelledby="channels-heading">
+      <div class="case-section-heading"><div><p class="case-kicker">The journey</p><h2 id="channels-heading">Give every<br />channel a job.</h2></div><p>Plan the hand-off between attention and action before adding more media.</p></div>
+      <div class="case-table-wrap"><table class="case-channel-table"><caption>Proposed channel plan for {project.brand}; not a record of executed activity.</caption><thead><tr><th scope="col">Moment</th><th scope="col">Touchpoint</th><th scope="col">What it needs to do</th></tr></thead><tbody>{project.channels.map(channel => <tr><th scope="row">{channel.stage}</th><td>{channel.channel}</td><td>{channel.goal}</td></tr>)}</tbody></table></div>
+    </section>
+
+    {isAeru && <section class="case-measurement" aria-labelledby="measurement-heading">
+      <div class="case-section-heading"><div><p class="case-kicker">The measurement plan</p><h2 id="measurement-heading">A framework<br />for learning.</h2></div><p>Define a valid enquiry. Keep the denominator consistent. Decide what you need to learn before you launch.</p></div>
+      <p class="case-synthetic-label">Illustrative scenario using synthetic data. Not an actual campaign result.</p>
+      <div class="case-scenario-grid">
+        <div class="case-scenario"><div class="case-scenario-top"><h3>Scenario A</h3><span>Planning model</span></div><strong>2<span>%</span></strong><p>Lead conversion rate</p><div class="case-scenario-bar" aria-hidden="true"><span style="width:66.667%"></span></div><dl><div><dt>Sessions</dt><dd>12,000</dd></div><div><dt>Valid leads</dt><dd>240</dd></div></dl></div>
+        <div class="case-scenario"><div class="case-scenario-top"><h3>Scenario B</h3><span>Planning model</span></div><strong>3<span>%</span></strong><p>Lead conversion rate</p><div class="case-scenario-bar" aria-hidden="true"><span style="width:100%"></span></div><dl><div><dt>Sessions</dt><dd>12,000</dd></div><div><dt>Valid leads</dt><dd>360</dd></div></dl></div>
+      </div>
+      <p class="case-measurement-note">Conversion rate = valid leads ÷ sessions. These are separate hypothetical scenarios, not before-and-after results or an experiment that has been run. A real plan would also define attribution, lead quality and the observation window.</p>
+    </section>}
+
+    <section class="case-delivery" aria-labelledby="delivery-heading"><div><p class="case-kicker">The concept package</p><h2 id="delivery-heading">What comes<br />out of the work.</h2><p>Strategy made tangible, with clear hypotheses to validate before a real launch.</p></div><ul>{project.deliverables.map(item => <li><span aria-hidden="true">↗</span>{item}</li>)}</ul></section>
+    <a class="case-next" href={`/work/${next.slug}/`}><div><span>Next concept / {next.brand}</span><h2>{next.title}</h2></div><span class="case-next-arrow" aria-hidden="true">↗</span></a>
+  </div>
+</BaseLayout>

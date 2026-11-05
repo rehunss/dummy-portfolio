@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "disclaimer": "Illustrative scenario using synthetic data. Not an actual campaign result.",
+  "relationship": "Independent planning scenarios; not before/after results or a completed experiment.",
+  "conversion_definition": "lead count divided by session count",
+  "scenarios": [
+    {
+      "name": "Scenario A",
+      "sessions": 12000,
+      "leads": 240,
+      "lead_conversion_rate": 0.02
+    },
+    {
+      "name": "Scenario B",
+      "sessions": 12000,
+      "leads": 360,
+      "lead_conversion_rate": 0.03
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import Spark from '../components/Spark.astro';
+interface Props { title: string; description?: string; image?: string; }
+const { title, description = 'A fictional brand and growth strategist’s portfolio. Exploring the space between a good insight and a great campaign.', image = '/media/arka-portrait.webp' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101c2c" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Arka Pradana home">arka<span aria-hidden="true"><Spark /></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a>
+      </nav>
+      <a class="header-contact" href="/#contact">Let's talk <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false"><span></span><span></span></button>
+    </header>
+    <dialog id="site-menu" class="site-menu" aria-label="Main menu">
+      <div class="menu-top"><a class="wordmark" href="/" aria-label="Arka Pradana home">arka<span aria-hidden="true"><Spark /></span></a><button class="menu-close" aria-label="Close menu">Close <span aria-hidden="true">×</span></button></div>
+      <nav aria-label="Mobile navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/#contact">Let's talk</a></nav>
+      <p>Independent thinking.<br />A different perspective.</p>
+    </dialog>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-top"><a class="wordmark" href="/" aria-label="Arka Pradana home">arka<span aria-hidden="true"><Spark /></span></a><p>Good strategy starts<br />with a better question.</p><a href="/#contact" class="footer-contact">Let's find yours <span aria-hidden="true">↗</span></a></div>
+      <div class="footer-bottom"><p>© 2026 Arka Pradana</p><p>Fictional marketing portfolio. People, brands, projects, research, and metrics are created for demonstration.</p><a href="/about-this-demo/">About this demo</a></div>
+    </footer>
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>
