@@ -43,6 +43,14 @@ Font licenses are included in `public/fonts/`. Barlow Condensed and Manrope use 
 
 See [implementation and verification](docs/IMPLEMENTATION.md) for test outcomes, local Lighthouse results, screenshots, and remaining deployment details.
 
-The static output is `dist/`. Before public deployment, configure the real domain/site URL, use absolute Open Graph image URLs and canonical URLs, and add the owner's real business contact if desired. Configure the host to serve `404.html` for unknown routes. Publishing a website or the cloud environment is a separate action.
+## GitHub Pages deployment
+
+The workflow in `.github/workflows/deploy.yml` checks, builds and publishes the site whenever `main` changes. Target URL: **https://rehunss.github.io/dummy-portfolio/** (availability depends on Pages being enabled and a successful workflow run).
+
+One-time repository setting: **Settings → Pages → Build and deployment → Source → GitHub Actions**. If this is enabled after a failed first run, open **Actions → Deploy portfolio to GitHub Pages → Run workflow** on `main`.
+
+The workflow sets `SITE_URL=https://rehunss.github.io` and `SITE_BASE_PATH=/dummy-portfolio`. Internal navigation, images, fonts and downloads support this subpath. Sharing images and canonical URLs are absolute. Local development still runs at the root path.
+
+The static output is `dist/`; the host should serve `404.html` for unknown routes. For a custom domain, set `SITE_URL` to that origin and `SITE_BASE_PATH=/`. The owner's real business contact can be added independently. GitHub Pages publication does not publish or modify the cloud environment.
 
 Original planning: [project plan](docs/PROJECT-PLAN.md), [content brief](docs/CONTENT-BRIEF.md), [asset plan](docs/ASSET-PLAN.md).

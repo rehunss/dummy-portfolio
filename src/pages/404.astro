@@ -1,8 +1,9 @@
 ---
+import { withBase } from '../utils/paths';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/case-study.css';
 ---
 
 <BaseLayout title="Page not found | Arka Pradana" description="This page could not be found. Explore the fictional marketing portfolio of Arka Pradana.">
-  <div class="not-found"><span class="not-found-number" aria-hidden="true">404</span><div><p class="case-kicker">Page not found</p><h1>A different<br />direction.</h1><p>This page isn't here. The next idea might be.</p><a href="/">Back to the portfolio <span aria-hidden="true">↗</span></a></div></div>
+  <div class="not-found"><span class="not-found-number" aria-hidden="true">404</span><div><p class="case-kicker">Page not found</p><h1>A different<br />direction.</h1><p>This page isn't here. The next idea might be.</p><a href={withBase('/')}>Back to the portfolio <span aria-hidden="true">↗</span></a></div></div>
 </BaseLayout>

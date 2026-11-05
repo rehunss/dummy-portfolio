@@ -1,4 +1,5 @@
 ---
+import { withBase, withBaseSrcset } from '../../utils/paths';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projects } from '../../data/projects';
 import type { Project } from '../../data/projects';
@@ -20,7 +21,7 @@ const isAeru = project.slug === 'after-hours';
 <BaseLayout title={`${project.title} — ${project.brand} | Arka Pradana`} description={project.description} image={project.image}>
   <div class="case-page" style={`--project-accent:${project.accent}`}>
     <section class="case-hero" aria-labelledby="case-title">
-      <a class="case-back" href="/#work"><BackArrow /> Back to work</a>
+      <a class="case-back" href={withBase('/#work')}><BackArrow /> Back to work</a>
       <div class="case-heading-row">
         <div>
           <p class="case-kicker">{project.brand} / {project.year}</p>
@@ -34,7 +35,7 @@ const isAeru = project.slug === 'after-hours';
         <div><span>Project status</span><p>Fictional campaign / Strategy concept</p></div>
       </div>
       <figure class="case-cover">
-        <img src={project.image} srcset={`${project.image.replace('.webp', '-640.webp')} 640w, ${project.image.replace('.webp', '-960.webp')} 960w, ${project.image} 1536w`} sizes="(max-width: 767px) 100vw, 94vw" width="1536" height="1024" alt={project.imageAlt} fetchpriority="high" />
+        <img src={withBase(project.image)} srcset={withBaseSrcset(`${project.image.replace('.webp', '-640.webp')} 640w, ${project.image.replace('.webp', '-960.webp')} 960w, ${project.image} 1536w`)} sizes="(max-width: 767px) 100vw, 94vw" width="1536" height="1024" alt={project.imageAlt} fetchpriority="high" />
         <figcaption>Original concept imagery for {project.brand}. AI-generated; not a real campaign.</figcaption>
       </figure>
     </section>
@@ -73,21 +74,21 @@ const isAeru = project.slug === 'after-hours';
     <section class="case-system" aria-labelledby="system-heading">
       <div class="case-section-heading"><div><p class="case-kicker">The campaign system</p><h2 id="system-heading">One idea.<br />Different moments.</h2></div><p>Concept applications that connect the message, the medium and the next step.</p></div>
       <figure class="case-billboard">
-        <img src={project.image} width="1600" height="1067" alt="" loading="lazy" />
+        <img src={withBase(project.image)} width="1600" height="1067" alt="" loading="lazy" />
         <div class="case-billboard-copy"><span class="case-brand">{project.brand}</span><h3>{project.headline}</h3><span class="case-mock-action">{project.action} <span aria-hidden="true">↗</span></span></div>
         <figcaption>Outdoor campaign concept / Not a live placement</figcaption>
       </figure>
       <div class="case-applications">
         <figure class="case-social">
           <div class="case-social-top"><span class="case-brand">{project.brand}</span><span>Campaign concept</span></div>
-          <img src={project.image.replace('.webp', '-640.webp')} width="640" height="427" alt="" loading="lazy" />
+          <img src={withBase(project.image.replace('.webp', '-640.webp'))} width="640" height="427" alt="" loading="lazy" />
           <div class="case-social-bottom"><h3>{project.headline}</h3><p>{project.promise}</p></div>
           <figcaption>Social creative / Illustrative application</figcaption>
         </figure>
         <figure class="case-landing">
           <div class="case-browser-bar" aria-hidden="true"><span></span><span></span><span></span><i>{project.brand.toLowerCase().replace(/\s/g, '')}.example</i></div>
           <div class="case-landing-nav"><span class="case-brand">{project.brand}</span><span>Discover the concept</span></div>
-          <div class="case-landing-body"><div><h3>{project.headline}</h3><p>{project.promise}</p><span class="case-mock-action">{project.action} <span aria-hidden="true">↗</span></span></div><img src={project.image.replace('.webp', '-640.webp')} width="640" height="427" alt="" loading="lazy" /></div>
+          <div class="case-landing-body"><div><h3>{project.headline}</h3><p>{project.promise}</p><span class="case-mock-action">{project.action} <span aria-hidden="true">↗</span></span></div><img src={withBase(project.image.replace('.webp', '-640.webp'))} width="640" height="427" alt="" loading="lazy" /></div>
           <figcaption>Landing-page messaging / Static mockup</figcaption>
         </figure>
       </div>
@@ -110,6 +111,6 @@ const isAeru = project.slug === 'after-hours';
     </section>}
 
     <section class="case-delivery" aria-labelledby="delivery-heading"><div><p class="case-kicker">The concept package</p><h2 id="delivery-heading">What comes<br />out of the work.</h2><p>Strategy made tangible, with clear hypotheses to validate before a real launch.</p></div><ul>{project.deliverables.map(item => <li><span aria-hidden="true">↗</span>{item}</li>)}</ul></section>
-    <a class="case-next" href={`/work/${next.slug}/`}><div><span>Next concept / {next.brand}</span><h2>{next.title}</h2></div><span class="case-next-arrow" aria-hidden="true">↗</span></a>
+    <a class="case-next" href={withBase(`/work/${next.slug}/`)}><div><span>Next concept / {next.brand}</span><h2>{next.title}</h2></div><span class="case-next-arrow" aria-hidden="true">↗</span></a>
   </div>
 </BaseLayout>

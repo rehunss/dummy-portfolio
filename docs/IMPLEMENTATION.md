@@ -53,7 +53,7 @@ Audit lengkap tersimpan di [lighthouse-mobile.json](verification/lighthouse-mobi
 - Audit langsung website Lando Norris belum tersedia karena pembatasan jaringan yang teridentifikasi pada planning. Situs ini mengembangkan brief cinematic scrolling secara orisinal; tidak mengklaim menyalin persis website referensi.
 - Safari/iOS, Firefox, Chrome Android di perangkat fisik dan data performa lapangan belum diuji.
 - Kontak bisnis pemilik showcase dan domain hosting belum diberikan. Brief tetap bisa dibuat/diunduh; tidak ada pesan yang dikirim.
-- Open Graph image masih berupa path relatif. Saat domain final tersedia, atur `site`, canonical dan absolute sharing image URL, serta konfigurasi 404 pada hosting.
+- Pembaruan deployment: workflow GitHub Pages sudah disiapkan dengan base `/dummy-portfolio`, canonical dan sharing-image absolut. Aktivasi Pages dan hasil workflow menentukan apakah URL publik sudah tersedia; lihat README.
 - Tidak ada deployment, perubahan environment draft, commit atau publikasi otomatis.
 
 ## Melanjutkan
